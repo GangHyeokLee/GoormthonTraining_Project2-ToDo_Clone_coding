@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Todo</title>
   <link rel="stylesheet" href="styles/general.css">
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/list.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
-<body>
-  <head class="header">
 
+<body>
+
+  <head class="header">
+    <div class="header_content">
+      <div class="header_title">
+        Todos 앱
+      </div>
+      <button class="header_newTodo-button">
+        새로운 TODO 추가하기
+      </button>
+    </div>
   </head>
   <main class="main-container">
-
+    <div class="Todo_list">
+      <div class="list_left">
+        <button class="list_done">v</button>
+        <p class="list_name">밥먹기</p>
+      </div>
+      <div class="list_right">
+        <button class="list_edit">편</button>
+        <button class="list_delete">삭</button>
+      </div>
+    </div>
   </main>
-  
 </body>
+
 </html>

@@ -1,0 +1,72 @@
+.main-container{
+  display: flex;
+  color: var(--text-color);
+  height: 100%;
+  margin: 1% 3%;
+}
+
+.Todo_list{
+  display: flex;
+  height: 40%;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: rgba(230, 230, 230, 0.8);
+  border: none;
+  border-radius: 5px;
+  padding: 2%;
+  align-items: center;
+}
+
+.list_left{
+  background-color: transparent;
+  display: flex;
+  width: 70%;
+  justify-content: flex-start;
+}
+
+.list_done{
+  border-radius: 5px;
+  background-color: white;
+  width: 3.5%;
+  height: 100%;
+  border-color: lightgray;
+  color: white;
+  font-size: 16px;
+}
+
+.list_name{
+  margin-left: 3%;
+  background-color: transparent;
+  color: black;
+  font-size: 20px;
+  width: 90%;
+}
+
+
+.list_done:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.list_right{
+  background-color: transparent;
+  display: flex;
+  width: 30%;
+  justify-content: flex-end;
+}
+
+.list_edit, .list_delete{
+  border: none;
+  background-color: transparent;
+  color: lightcoral;
+  font-size: 20px;
+}
+
+.list_edit{
+  margin-right: 5%;
+}
+
+.list_edit, .list_delete:hover{
+  cursor: pointer;
+}

@@ -1,0 +1,25 @@
+*{
+  margin : 0;
+  font-family: 'Noto Sans KR', sans-serif;;
+  background-color: lightcoral;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: var(--header-back-color);
+}
+
+img{
+  max-width: 100%;
+}
+
+:root{
+  --button-back-color : rgbs(200, 200, 200, 0.7);
+
+  --text-color : #FAFAFA;
+
+  --noti-color : #FF0000;
+}
