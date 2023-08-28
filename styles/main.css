@@ -57,12 +57,14 @@
 
 
 .list_name_edit{
- display: none;
+ background-color: transparent;
+ border: none;
+font-size: 20px;
 }
 
 
 .list_done:hover{
-  color: black;
+  
   transition: 0.5s;
   cursor: pointer;
   display: flex;
@@ -81,7 +83,8 @@
   border: none;
   background-color: transparent;
   color: lightcoral;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .list_edit{

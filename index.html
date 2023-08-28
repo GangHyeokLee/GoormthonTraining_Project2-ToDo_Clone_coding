@@ -21,7 +21,7 @@
       <div class="header_title">
         Todos 앱
       </div>
-      <button class="header_newTodo-button">
+      <button class="header_newTodo-button" id="newTodo-button">
         새로운 TODO 추가하기
       </button>
     </div>
@@ -30,31 +30,17 @@
     <div class="list_container">
       <div class="Todo_list">
         <div class="list_left">
-          <button class="list_done">v</button>
+          <input type="checkbox" class="list_done" id="listCheckbox">
           <div class="list_name_container">
             <p class="list_name">밥먹기</p>
             <input class="list_name_edit" id="list_name_edit">
           </div>
         </div>
         <div class="list_right">
-          <button class="list_edit">편</button>
+          <button class="list_edit" id="list_edit">편</button>
           <button class="list_delete">삭</button>
         </div>
-      </div>
-      <div class="Todo_list">
-        <div class="list_left">
-          <button class="list_done">v</button>
-          <div class="list_name_container">
-            <p class="list_name">밥먹기</p>
-            <input class="list_name_edit" id="list_name_edit">
-          </div>
-        </div>
-        <div class="list_right">
-          <button class="list_edit">편</button>
-          <button class="list_delete">삭</button>
-        </div>
-      </div>
-      
+      </div>    
     </div>
   </main>
 </body>
