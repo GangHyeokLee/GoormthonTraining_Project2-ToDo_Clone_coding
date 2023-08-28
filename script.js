@@ -45,6 +45,8 @@ newListBtn.addEventListener("click", () => {
   btEdit.setAttribute('class','list_edit');
   btEdit.setAttribute('id', listIds.at(-1)+'list_edit');
   btEdit.setAttribute('onClick', 'ListEdit(this)');
+  btEdit.setAttribute('title', '수정');
+  btEdit.setAttribute('style', 'display:none');
   btEdit.append('✎');
   listRight.appendChild(btEdit);
   //삭제 버튼 만들기
@@ -52,6 +54,7 @@ newListBtn.addEventListener("click", () => {
   btDelete.setAttribute('class', 'list_delete');
   btDelete.setAttribute('id', listIds.at(-1)+'list_delete');
   btDelete.setAttribute('onClick', 'ListDelete(this)');
+  btDelete.setAttribute('title', '삭제');
   btDelete.append('🗑');
   listRight.appendChild(btDelete);
 
@@ -60,22 +63,30 @@ newListBtn.addEventListener("click", () => {
   mainList.appendChild(newList);
 });
 
+//엔터키 누르면 입력상태 바꾸는 함수. 
 function enterkey(name){
   if (event.keyCode == 13) {
-    let input = document.createElement('p');
-    input.setAttribute('class', 'list_name');
+
+    let input = document.getElementById(parseInt(name.id) + 'list_name');
+    if(input == null){
+      input = document.createElement('p');
+      input.setAttribute('class', 'list_name');
+
+      //상위 요소 찾아서 추가시키기
+      name.closest('div').appendChild(input);
+    }
+    else{
+      input.setAttribute('style', 'display:block');
+    }
+    
     input.setAttribute('id', parseInt(name.id)+'list_name');
     input.innerHTML=name.value;
 
-    let closestElement = name.closest('div');
-    console.log(closestElement);
-    closestElement.appendChild(input);
     name.setAttribute('style', 'display:none');
 
-    let cbDone = document.getElementById(parseInt(name.id) + 'listCheckbox');
-    console.log(cbDone);
-    cbDone.disabled = false;
-    
+    document.getElementById(parseInt(name.id) + 'listCheckbox').disabled = false;
+
+    document.getElementById(parseInt(name.id) + 'list_edit').setAttribute('style', 'display:block');    
   }
 }
 
@@ -90,4 +101,19 @@ function BeDone(oButton){
       text.setAttribute('style', 'text-decoration:none'); 
     }
   }
+}
+
+function ListEdit(oButton){
+  let text = document.getElementById(parseInt(oButton.id) + 'list_name');
+  if(text!=null){
+    oButton.setAttribute('style', 'display:none');
+    text.setAttribute('style', 'display: none');
+    document.getElementById(parseInt(oButton.id) + 'list_name_edit').setAttribute('style', 'display: block');
+    document.getElementById(parseInt(oButton.id) + 'listCheckbox').disabled=true;
+    document.getElementById(parseInt(oButton.id) + 'listCheckbox').checked=false;
+  }
+}
+
+function ListDelete(oButton){
+
 }
