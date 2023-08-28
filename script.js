@@ -115,5 +115,5 @@ function ListEdit(oButton){
 }
 
 function ListDelete(oButton){
-
+  document.getElementById(parseInt(oButton.id) + 'toDoList').remove();
 }
