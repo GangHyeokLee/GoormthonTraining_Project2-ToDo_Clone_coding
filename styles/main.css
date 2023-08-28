@@ -1,21 +1,25 @@
 .main-container{
   display: flex;
   color: var(--text-color);
-  height: 100%;
-  margin: 1% 3%;
 }
 
+.list_container{
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
 .Todo_list{
   display: flex;
   height: 40%;
-  width: 100%;
   justify-content: space-between;
-  flex-direction: row;
-  background-color: rgba(230, 230, 230, 0.8);
+  background-color: var(--button-back-color);
   border: none;
   border-radius: 5px;
   padding: 2%;
   align-items: center;
+  margin: 1% 3%;
+  position: relative;
 }
 
 .list_left{
@@ -23,30 +27,47 @@
   display: flex;
   width: 70%;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .list_done{
   border-radius: 5px;
-  background-color: white;
-  width: 3.5%;
-  height: 100%;
+  background-color: var(--text-color);
+  width: 20px;
+  height: 20px;
+  border: solid;
   border-color: lightgray;
-  color: white;
-  font-size: 16px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list_name_container{
+  width: 90%;
+  margin-left: 3%;
+  background-color: transparent;
 }
 
 .list_name{
-  margin-left: 3%;
   background-color: transparent;
   color: black;
   font-size: 20px;
-  width: 90%;
+}
+
+
+.list_name_edit{
+ display: none;
 }
 
 
 .list_done:hover{
   color: black;
+  transition: 0.5s;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .list_right{
